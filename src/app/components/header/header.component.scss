@@ -1,0 +1,19 @@
+.nav-link {
+  padding: 0 .5rem 2px;
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-radius: 5px 15px 5px 5px;
+}
+
+.nav-link:hover {
+  border: 2px solid rgba(255, 255, 255, 1);
+}
+
+.header-wrapper::after {
+  content: '';
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 20, 160, 1), rgba(0, 20, 160, 0));
+}
