@@ -1,7 +1,8 @@
 import {NgModule} from '@angular/core';
-import {PlanetListComponent} from "./planet-list.component";
+import {PlanetListComponent} from "./planet-list/planet-list.component";
 import {CommonModule} from "@angular/common";
 import {RouterModule} from "@angular/router";
+import {PlanetInfoComponent} from "./planet-info/planet-info.component";
 
 const routes = [
   {
@@ -16,7 +17,8 @@ const routes = [
     RouterModule.forChild(routes)
   ],
   declarations: [
-    PlanetListComponent
+    PlanetListComponent,
+    PlanetInfoComponent
   ]
 })
 export class PlanetListModule {

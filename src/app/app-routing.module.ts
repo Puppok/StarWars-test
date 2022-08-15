@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: 'planet-list',
-    loadChildren: () => import('./components/planets/planet-list/planet-list.module').then(module => module.PlanetListModule)
+    loadChildren: () => import('./components/planets/planet-list.module').then(module => module.PlanetListModule)
   }
 ];
 
