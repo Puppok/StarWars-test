@@ -14,16 +14,33 @@
       <p>Surface/Water: {{ planet.surface_water }}</p>
       <p>Rotation period: {{ planet.rotation_period }}</p>
       <p class="pb-16">Orbital period: {{ planet.orbital_period }}</p>
-      <button class="back-button border border-white/0 px-3 hover:border-white">To planet list</button>
+      <button
+        class="back-button border border-white/0 px-3 hover:border-white"
+        (click)="toPlanetList()"
+      >
+        To planet list
+      </button>
     </section>
 
-    <section class="flex-1 bg-red-300">
-      <h2>residents</h2>
+    <section class="border-2 border-[#0014a0]/80 rounded-xl bg-black/80 px-6 py-4 text-lg w-[30%] overflow-y-auto">
+      <h2 class="text-2xl font-medium">Residents:</h2>
+      <div class="" *ngFor="let resident of planetCardService.residents$| async">
+        <h3 class="font-medium pt-4">{{ resident.name }}</h3>
+        <div class="flex flex-wrap text-sm w-[100%]">
+          <p class="w-[33%]">Gender: {{ resident.gender }}</p>
+          <p class="w-[33%]">Birth: {{ resident.birth_year }}</p>
+          <p class="w-[33%]">Height: {{ resident.height }}</p>
+          <p class="w-[33%]">Mass: {{ resident.mass }}</p>
+          <p class="w-[33%]">Hair: {{ resident.hair_color }}</p>
+          <p class="w-[33%]">Skin: {{ resident.skin_color }}</p>
+          <p class="w-[33%]">Eyes: {{ resident.eye_color }}</p>
+        </div>
+      </div>
     </section>
 
     <section class="border-2 border-[#0014a0]/80 rounded-xl bg-black/80 px-6 py-4 text-lg w-[30%] overflow-y-auto">
       <h2 class="text-2xl font-medium pb-3">Films:</h2>
-      <div class="pb-2"  *ngFor="let film of planetCardService.films$ | async">
+      <div class="pb-2" *ngFor="let film of planetCardService.films$ | async">
         <p class="font-medium">{{ film.title }}</p>
         <p class="text-sm">Episode number: {{ film.episode_id }}</p>
         <p class="text-sm">Release date: {{ film.release_date | date}}</p>

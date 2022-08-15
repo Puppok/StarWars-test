@@ -4,6 +4,7 @@ import {Planet} from "../../../models/planet.interface";
 import {ActivatedRoute, Router} from "@angular/router";
 import {ApiService} from "../../../services/api.service";
 import {Film} from "../../../models/film.interface";
+import {Resident} from "../../../models/resident.interface";
 
 @Injectable()
 export class PlanetCardService {
@@ -15,6 +16,12 @@ export class PlanetCardService {
       return EMPTY
     }),
     shareReplay(1)
+  )
+
+  residents$: Observable<Resident[]> = this.planet$.pipe(
+    switchMap(planet => planet.residents.length > 0 ? zip(
+      planet.residents.map(url => this.apiService.getResident(url))
+    ) : of([]))
   )
 
   films$: Observable<Film[]> = this.planet$.pipe(
