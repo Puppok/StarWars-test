@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Planet} from "../../../models/planet.interface";
 
 @Component({
   selector: 'sw-planet-info',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./planet-info.component.scss']
 })
 export class PlanetInfoComponent implements OnInit {
+
+  @Input() planet!: Planet
 
   constructor() { }
 
