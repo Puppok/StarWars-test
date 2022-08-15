@@ -3,6 +3,7 @@ import {PlanetListComponent} from "./planet-list/planet-list.component";
 import {CommonModule} from "@angular/common";
 import {RouterModule} from "@angular/router";
 import {PlanetInfoComponent} from "./planet-info/planet-info.component";
+import { PlanetCardComponent } from './planet-card/planet-card.component';
 
 const routes = [
   {
@@ -18,7 +19,8 @@ const routes = [
   ],
   declarations: [
     PlanetListComponent,
-    PlanetInfoComponent
+    PlanetInfoComponent,
+    PlanetCardComponent
   ]
 })
 export class PlanetListModule {
