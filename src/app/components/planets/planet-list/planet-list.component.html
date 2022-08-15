@@ -1,6 +1,9 @@
 <section class="h-full text-white">
-  <main class="">
-<!--    todo: planet-info component-->
+  <main class="border-white">
+    <sw-planet-info
+      *ngFor="let planet of planetListService.planets$ | async"
+      [planet]="planet"
+    ></sw-planet-info>
   </main>
   <div class="">
     <button class="">Previous</button>
