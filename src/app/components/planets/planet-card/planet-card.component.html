@@ -1,1 +1,28 @@
-<p class="text-white">planet-card works!</p>
+<section *ngIf="planetCardService.planet$ | async as planet" class="h-full w-full">
+  <h1 class="h-[10%] pt-4 w-1/4 mx-auto flex justify-center items-center text-white text-4xl font-medium">
+    {{ planet.name }}
+  </h1>
+  <main class="text-white flex gap-6 px-8 py-6 h-[90%]">
+    <section class=" border-2 border-[#0014a0]/80 rounded-xl bg-black/80 px-6 py-4 text-lg w-[30%]">
+      <h2 class="text-2xl font-medium pb-3">Description:</h2>
+      <h3>Terrain: {{ planet.terrain | titlecase}}</h3>
+      <h3>Diameter: {{ planet.diameter }} km</h3>
+      <h3 class="pb-8">Population: {{ planet.population}}</h3>
+      <h2 class="text-2xl font-medium pb-3">More info:</h2>
+      <p>Climate: {{ planet.climate |titlecase }}</p>
+      <p>Gravity: {{ planet.gravity }}</p>
+      <p>Surface/Water: {{ planet.surface_water }}</p>
+      <p>Rotation period: {{ planet.rotation_period }}</p>
+      <p class="pb-16">Orbital period: {{ planet.orbital_period }}</p>
+      <button class="back-button border border-white/0 px-3 hover:border-white">To planet list</button>
+    </section>
+
+    <section class="flex-1 bg-red-300">
+      <h2>residents</h2>
+    </section>
+
+    <section class="flex-1 bg-gray-500">
+      <h2>films</h2>
+    </section>
+  </main>
+</section>
