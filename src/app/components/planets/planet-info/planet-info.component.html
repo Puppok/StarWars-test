@@ -1,1 +1,14 @@
-<p>planet-info works!</p>
+<section class="info-wrapper border-4 h-full w-full bg-black/80">
+  <h1 class="flex justify-center pt-2 pb-4 text-lg font-bold">{{ planet.name }}</h1>
+  <section class="flex flex-col justify-center items-center text-center font-bold">
+    <h4 class="pb-2">
+      Climate: <br> <span class="font-normal"> {{planet.climate}} </span>
+    </h4>
+    <h4 class="pb-2">
+      Diameter: <br> <span class="font-normal"> {{planet.diameter | number }} km</span>
+    </h4>
+    <h4 class="pb-2">
+      Population: <br> <span class="font-normal"> {{planet.population}} </span>
+    </h4>
+  </section>
+</section>
