@@ -1,4 +1,7 @@
-<section class="info-wrapper border-4 h-full w-full bg-black/80">
+<section
+  class="info-wrapper border-4 h-full w-full bg-black/80"
+  [routerLink]="planet.name"
+>
   <h1 class="flex justify-center pt-2 pb-4 text-lg font-bold">{{ planet.name }}</h1>
   <section class="flex flex-col justify-center items-center text-center font-bold">
     <h4 class="pb-2">
