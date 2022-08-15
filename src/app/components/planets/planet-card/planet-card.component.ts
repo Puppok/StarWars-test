@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {PlanetCardService} from "./planet-card.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'sw-planet-card',
@@ -7,11 +8,12 @@ import {PlanetCardService} from "./planet-card.service";
   styleUrls: ['./planet-card.component.scss'],
   providers: [PlanetCardService]
 })
-export class PlanetCardComponent implements OnInit {
+export class PlanetCardComponent {
 
-  constructor(readonly planetCardService: PlanetCardService) { }
+  constructor(readonly planetCardService: PlanetCardService,
+              private router: Router) { }
 
-  ngOnInit(): void {
+  toPlanetList() {
+    this.router.navigateByUrl('/planet-list')
   }
-
 }
