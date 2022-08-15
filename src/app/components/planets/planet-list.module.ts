@@ -8,6 +8,10 @@ const routes = [
   {
     path: '',
     component: PlanetListComponent
+  },
+  {
+    path: ':id',
+    loadChildren: () => import('./planet-card/planet-card.module').then(module => module.PlanetCardModule)
   }
 ]
 
@@ -18,7 +22,7 @@ const routes = [
   ],
   declarations: [
     PlanetListComponent,
-    PlanetInfoComponent
+    PlanetInfoComponent,
   ]
 })
 export class PlanetListModule {

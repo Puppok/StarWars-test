@@ -10,9 +10,10 @@ export class PlanetInfoComponent implements OnInit {
 
   @Input() planet!: Planet
 
-  constructor() { }
+  planetId = ''
 
   ngOnInit(): void {
+    this.planetId = this.planet.url.replace(/[^\d]/g, '')
   }
 
 }
