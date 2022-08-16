@@ -11,16 +11,15 @@ import {Resident} from "../models/resident.interface";
 })
 export class ApiService {
 
-  private url = 'https://swapi.dev/api/planets/'
-
   constructor(private http: HttpClient) {}
 
-  getPlanets(): Observable<PlanetDTO> {
-    return this.http.get<PlanetDTO>(this.url)
+  getPlanets(url: string = 'https://swapi.dev/api/planets/'): Observable<PlanetDTO> {
+    return this.http.get<PlanetDTO>(url)
   }
 
   getPlanet(id: string): Observable<Planet> {
-    return this.http.get<Planet>(this.url + id)
+    const url = 'https://swapi.dev/api/planets/'
+    return this.http.get<Planet>(url + id)
   }
 
   getResident(url: string): Observable<Resident> {
