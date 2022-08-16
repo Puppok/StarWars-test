@@ -15,5 +15,4 @@ export class PlanetInfoComponent implements OnInit {
   ngOnInit(): void {
     this.planetId = this.planet.url.replace(/[^\d]/g, '')
   }
-
 }

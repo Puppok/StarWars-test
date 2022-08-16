@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {PlanetListService} from "../../../services/planet-list.service";
 
 @Component({
-  selector: 'app-planet-list',
+  selector: 'sw-planet-list',
   templateUrl: './planet-list.component.html',
   styleUrls: ['./planet-list.component.scss']
 })
@@ -13,5 +13,4 @@ export class PlanetListComponent implements OnInit {
   ngOnInit(): void {
     this.planetListService.init()
   }
-
 }
