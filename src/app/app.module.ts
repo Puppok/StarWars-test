@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import {HttpClientModule} from "@angular/common/http";
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NotFoundPageComponent } from './components/not-found-page/not-found-pag
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
