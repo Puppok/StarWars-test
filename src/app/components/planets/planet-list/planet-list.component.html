@@ -7,7 +7,7 @@
     ></sw-planet-info>
   </main>
   <div class="h-[15%] flex justify-center items-center gap-16">
-    <button class="paginationButton">Previous</button>
-    <button class="paginationButton">Next</button>
+    <button class="paginationButton" (click)="planetListService.previousPage()">Previous</button>
+    <button class="paginationButton" (click)="planetListService.nextPage()">Next</button>
   </div>
 </section>
