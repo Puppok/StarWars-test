@@ -7,7 +7,7 @@
   <header class="h-[10%]">
     <sw-header></sw-header>
   </header>
-  <main class="flex-1">
-    <router-outlet></router-outlet>
+  <main class="flex-1" [@routeAnimation]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
   </main>
 </section>
