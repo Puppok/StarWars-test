@@ -1,0 +1,11 @@
+<form class="w-full">
+  <label class="pr-1 text-[.9rem]">Filter by: </label>
+  <select [formControl]="formOption"
+          class="w-[30%] bg-black/80 border rounded-xl text-center appearance-none text-[.9rem] outline-none"
+  >
+    <option [value]="genderFilterOptions.NONE">None</option>
+    <option [value]="genderFilterOptions.MALE">Male</option>
+    <option [value]="genderFilterOptions.FEMALE">Female</option>
+    <option [value]="genderFilterOptions.UNKNOWN">Unknown</option>
+  </select>
+</form>

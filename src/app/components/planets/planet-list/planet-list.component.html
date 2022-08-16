@@ -1,0 +1,13 @@
+<section class="h-full w-full text-white">
+  <main class=" pt-6 mx-auto flex flex-wrap w-[100%] h-[85%] justify-center gap-4">
+    <sw-planet-info
+      class="w-[18%] h-[48%] cursor-pointer transition duration-150 ease-in hover:scale-[1.02]"
+      *ngFor="let planet of planetListService.planets$ | async"
+      [planet]="planet"
+    ></sw-planet-info>
+  </main>
+  <div class="h-[15%] flex justify-center items-center gap-16">
+    <button class="paginationButton" (click)="planetListService.previousPage()">Previous</button>
+    <button class="paginationButton" (click)="planetListService.nextPage()">Next</button>
+  </div>
+</section>
