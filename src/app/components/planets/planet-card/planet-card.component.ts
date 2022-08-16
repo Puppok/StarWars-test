@@ -1,5 +1,5 @@
 import {Component, OnDestroy} from '@angular/core';
-import {PlanetCardService} from "./planet-card.service";
+import {PlanetCardService} from "../../../services/planet-card.service";
 import {Router} from "@angular/router";
 import {GenderFilterService} from "../../../services/gender-filter.service";
 import {Resident} from "../../../models/resident.interface";

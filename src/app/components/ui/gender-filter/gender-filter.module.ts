@@ -3,7 +3,6 @@ import {CommonModule} from "@angular/common";
 import {GenderFilterComponent} from "./gender-filter.component";
 import {ReactiveFormsModule} from "@angular/forms";
 
-
 @NgModule({
   imports: [
     CommonModule,
@@ -16,5 +15,4 @@ import {ReactiveFormsModule} from "@angular/forms";
     GenderFilterComponent
   ]
 })
-export class GenderFilterModule {
-}
+export class GenderFilterModule {}
